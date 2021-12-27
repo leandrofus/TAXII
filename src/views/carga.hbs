@@ -1,11 +1,11 @@
 {{> header}}
 
-
 <div class="container d-flex align-items-center justify-content-center">
     <form action="carga" method="post">
     <div class="card">
         <div class="card-header">
             <h1>Carga de datos</h1>
+
         </div>
         <div class="card-body p-0 m-1">
             <h4 class="card-title p-0 m-0">Dia</h4>
@@ -34,6 +34,8 @@
         <div class="card-footer text-muted text-center">
            <button class='btn btn-primary' type="submit">   Cargar </button>
             <button class="btn btn-danger" type="button"id='Reset' onclick="location.reload()">    Limpiar    </button>
+            <h1 style="color: green;">{{exito}}</h1>
+
         </div>
     </form>
     </div>

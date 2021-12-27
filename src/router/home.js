@@ -36,6 +36,8 @@ router.post('/auth', async(req, res) => {
 router.post('/carga', async(req, res) => {
     console.log(req.session.userid)
     var carga = await db.carga(req.body, req.session.userid);
+    res.render('carga', { layout: false, exito: 'Carga exitosa' });
+
 
 })
 
