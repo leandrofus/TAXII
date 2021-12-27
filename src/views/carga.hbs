@@ -1,0 +1,53 @@
+{{> header}}
+
+
+<div class="container d-flex align-items-center justify-content-center">
+    <form action="carga" method="post">
+    <div class="card">
+        <div class="card-header">
+            <h1>Carga de datos</h1>
+        </div>
+        <div class="card-body p-0 m-1">
+            <h4 class="card-title p-0 m-0">Dia</h4>
+            <input class="form-control" type="date"  readonly required name="fecha" id="fecha">
+        </div>
+        <div class="card-body p-0 m-1">
+            <h4 class="card-title p-0 m-0">Recaudacion</h4>
+            <input class="form-control" type="number" tabindex="1" required name="recaudacion" id="recaudacion">
+        </div>
+        <div class="card-body p-0 m-1">
+            <h4 class="card-title p-0 m-0">Combustible</h4>
+            <input class="form-control" type="number" tabindex="2"  required name="combustible" id="combustible">
+        </div>
+        <div class="card-body p-0 m-1">
+            <h4 class="card-title p-0 m-0">50%</h4>
+            <input class="form-control" type="number" tabindex="3"  required name="cincuenta" id="cincuenta">
+        </div>
+        <div class="card-body p-0 m-1">
+            <h4 class="card-title p-0 m-0">Kilometros</h4>
+            <input class="form-control" type="number" tabindex="4"  required name="km" id="km">
+        </div>
+        <div class="card-body p-0 m-1">
+            <h4 class="card-title p-0 m-0">Gastos</h4>
+            <input class="form-control" type="number" tabindex="5" required name="gastos" id="gastos">
+        </div>
+        <div class="card-footer text-muted text-center">
+           <button class='btn btn-primary' type="submit">   Cargar </button>
+            <button class="btn btn-danger" type="button"id='Reset' onclick="location.reload()">    Limpiar    </button>
+        </div>
+    </form>
+    </div>
+</div>
+
+
+
+<script>
+
+window.addEventListener('load', () => {
+document.getElementById('fecha').valueAsDate = new Date();
+document.getElementById('recaudacion').focus();
+});
+
+</script>
+
+{{> footer}}
