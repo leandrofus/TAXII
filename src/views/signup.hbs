@@ -1,49 +1,54 @@
 {{> header}}
 
 <div class="container d-flex align-items-center justify-content-center">
-    <form action="carga" method="post">
+    <form action="signup" method="post">
     <div class="card">
         <div class="card-header">
-            <h1>Carga de datos</h1>
+            <h1>registro usuario</h1>
 
         </div>
         <div class="card-body p-0 m-1">
-            <h4 class="card-title p-0 m-0">Dia</h4>
-            <input class="form-control"  type="datetime-local" tabindex="0" readonly required name="fecha" id="fecha">
+            <h4 class="card-title p-0 m-0">Nombre</h4>
+            <input class="form-control"  type="text" tabindex="1" required name="nombre" id="nombre">
         </div>
         <div class="card-body p-0 m-1">
-            <h4 class="card-title p-0 m-0">Recaudacion</h4>
-            <input class="form-control" value="0" type="number" tabindex="1" required name="recaudacion" id="recaudacion">
+            <h4 class="card-title p-0 m-0">Disco</h4>
+            <input class="form-control" value="0" type="number" tabindex="2" required name="disco" id="disco">
         </div>
         <div class="card-body p-0 m-1">
-            <h4 class="card-title p-0 m-0">Combustible</h4>
-            <input class="form-control" value="0" type="number" tabindex="2"  required name="combustible" id="combustible">
+            <h4 class="card-title p-0 m-0">Telefono</h4>
+            <input class="form-control" value="0" type="number" tabindex="3"  required name="telefono" id="telefono">
         </div>
         <div class="card-body p-0 m-1">
-            <h4 class="card-title p-0 m-0">50%</h4>
-            <input class="form-control" value="0" type="number" tabindex="3"  required name="cincuenta" id="cincuenta">
+            <h4 class="card-title p-0 m-0">E-Mail</h4>
+            <input class="form-control" value="0" type="text" tabindex="4"  required name="mail" id="mail">
         </div>
-        <div class="card-body p-0 m-1">
-            <h4 class="card-title p-0 m-0">Kilometros</h4>
+        {{!-- <div class="card-body p-0 m-1">
+            <h4 class="card-title p-0 m-0"></h4>
             <input class="form-control" value="0" type="number" tabindex="4"  required name="km" id="km">
         </div>
         <div class="card-body p-0 m-1">
             <h4 class="card-title p-0 m-0">Gastos</h4>
             <input class="form-control" value="0" type="number" tabindex="5" required name="gastos" id="gastos">
         </div>
+        --}}
+        <div class="card-body p-0 m-1">
+            <h4 class="card-title p-0 m-0">Password</h4>
+            <input class="form-control"  type="password" tabindex="5"  required name="password" id="password">
+        </div>
         <div class="card-footer text-muted text-center">
            <button class='btn btn-primary' value="0" type="submit">   Cargar </button>
             <button class="btn btn-danger" value="0" type="button"id='Reset' onclick="location.reload()">    Limpiar    </button>
-            <h1 style="color: green;">{{exito}}</h1>
 
         </div>
+            <h1 style="color: green;">{{exito}}</h1>
     </form>
     </div>
 </div>
 
 
 
-<script>
+{{!-- <script>
 
 window.addEventListener('load', () => {
   const now = new Date();
@@ -51,6 +56,6 @@ window.addEventListener('load', () => {
   document.getElementById('fecha').value = now.toISOString().slice(0, -1);
 });
 
-</script>
+</script> --}}
 
 {{> footer}}

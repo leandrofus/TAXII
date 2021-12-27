@@ -52,5 +52,22 @@ async function carga(req, session) {
     client.close();
 
 }
+async function singup(req) {
+    const client = await MongoClient.connect(url, { useNewUrlParser: true });
 
-module.exports = { verTodo, insert, login, carga }
+    console.log(req);
+    var user = await client.db('taxii').collection('users').insertOne({
+        id: await client.db('taxii').collection('users').find().count() + 1,
+        nombre: req.nombre,
+        username: req.mail,
+        disco: req.disco,
+        telefono: req.telefono,
+        mail: req.mail,
+        password: req.password,
+    });
+    console.log(user);
+    client.close();
+
+}
+
+module.exports = { verTodo, insert, login, carga, singup }
